@@ -128,7 +128,7 @@ function Main() {
       <div className="relative h-screen" ref={constraintsRef}>
         <div className="relative h-full w-full top-0 left-0 z-10 text-white">
           <RightClick option={true} />
-          <div className="grid h-[80vh] grid-rows-8 gap-2 absolute top-2 left-2">
+          <div className="grid h-[80vh] grid-rows-4 grid-cols-3 gap-2 absolute top-2 left-2">
             {appsData.map((app, index) => (
               <motion.div
                 key={app.id}
@@ -138,7 +138,7 @@ function Main() {
                 className={`row-start-${index + 1}`}
               >
                 <div
-                  className="w-[5em] h-full flex flex-col justify-center items-center rounded-md hover:bg-white hover:bg-opacity-20 p-2"
+                  className="w-[5em] h-full flex flex-col justify-center items-center rounded-md hover:bg-white hover:bg-opacity-20 p-1"
                   onDoubleClick={() => toggleWindow(app.action, app.subAction)}
                 >
                   <img
